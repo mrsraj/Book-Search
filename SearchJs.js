@@ -38,7 +38,8 @@ function searchBooks() {
     const keyword = document.getElementById('searchInput').value.toLowerCase();
     const results = books.filter(book =>
         book.title.toLowerCase().includes(keyword) ||
-        book.author.toLowerCase().includes(keyword)
+        book.author.toLowerCase().includes(keyword) ||
+        book.releaseDate.includes(keyword)
     );
     displayResults(results);
 }
